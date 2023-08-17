@@ -4,6 +4,10 @@ body {
   font-family: "Monaco", Courier, monospace;
 }
 
+header {
+  font-size: 24px;
+}
+
 footer {
   position: fixed;
   width: 100vw;
