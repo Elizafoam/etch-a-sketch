@@ -8,33 +8,56 @@ header {
   font-size: 24px;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
 #options {
   display: flex;
   flex-direction: column;
-  left: 0;
 }
 
 #color {
   display: flex;
   gap: 20px;
+  margin-bottom: 16px;
 }
 
 .background-picker {
   margin-left: 27px;
 }
 
+.choice {
+  background-color: #e6e0e0;
+  display: inline;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#grid {
+  background-color: white;
+  height: 500px;
+  width: 520px;
+  border: solid 5px #9c9597;
+  border-radius: 7px;
+}
 
 .color-picker, .background-picker {
   height: 100px;
   width: 100px;
   background-color: rgb(56, 56, 56);
   border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 footer {
   position: fixed;
+  background-color: #e6e0e0;
   width: 100vw;
   padding: 4px;
   bottom: 0;
-
+  left: 0;
 }
