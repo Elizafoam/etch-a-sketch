@@ -39,6 +39,29 @@ main {
   margin-left: 22px;
 }
 
+
+input[type='range'] {
+  -webkit-appearance: none;
+  background-color: white;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 10px;
+  border: 1px solid #635e5f;
+  border-radius: 25px;
+  background: #ffffff;
+  margin: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 25px;
+  margin-top: -8px;
+  background: #635e5f;
+}
+
 .choice {
   background-color: #e6e0e0;
   display: inline;
