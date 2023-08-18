@@ -72,10 +72,22 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 #grid {
+  display: flex;
+  flex-wrap: wrap;
   background-color: white;
   height: 500px;
   width: 520px;
   box-shadow: rgba(43, 24, 17, 0.87) 0px 3px 8px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.row {
+  flex: 1;
 }
 
 input[type='color'] {
