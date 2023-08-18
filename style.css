@@ -75,8 +75,8 @@ input[type='range']::-webkit-slider-thumb {
   background-color: white;
   height: 500px;
   width: 520px;
-  border: solid 5px #9c9597;
-  border-radius: 7px;
+  border-radius: 3px;
+  box-shadow: rgba(43, 24, 17, 0.87) 0px 3px 8px;
 }
 
 input[type='color'] {
