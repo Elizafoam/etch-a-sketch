@@ -17,9 +17,18 @@ function upgradeGridSize(){
   }
 }
 
+function setBackgroundColor(){
+  gridContainer.style.backgroundColor = backgroundPicker.value;
+}
+
 const gridContainer = document.getElementById('grid');
 const gridSize = document.getElementById('grid-size');
 const gridLabel = document.getElementById('size-label');
 
 gridSize.addEventListener('mousemove', upgradeGridLabel);
 gridSize.addEventListener('change', upgradeGridSize);
+
+const penPicker = document.getElementById('color-picker');
+const backgroundPicker = document.getElementById('background-picker');
+
+backgroundPicker.addEventListener('change', setBackgroundColor);
