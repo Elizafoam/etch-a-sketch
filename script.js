@@ -16,7 +16,6 @@ function setGridSize(){
     let gridCol = document.createElement('div');
     gridCol.classList.add('col');
     gridContainer.appendChild(gridCol);
-
     for(let j = 0; j < gridSize.value; j++){
       let gridSquare = document.createElement('div');
       gridSquare.classList.add('row');
@@ -55,7 +54,6 @@ function getMode(){
     case 'eraser':
       penPicker.value = backgroundPicker.value;
       break;
-  
   }
   return penColor;
 }
@@ -85,6 +83,5 @@ const eraserButton = document.getElementById('eraser');
 const clearButton = document.getElementById('clear');
 
 clearButton.addEventListener('click', setGridSize)
-
 
 setGrid();
