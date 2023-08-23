@@ -52,12 +52,6 @@ function getMode(){
     case 'random':
       penPicker.value = `#${randomColor()}${randomColor()}${randomColor()}`;
       break;
-    case 'lighten':
-      penColor = penPicker.value;
-      break;
-    case 'darken':
-      penColor = penPicker.value;
-      break;
     case 'eraser':
       penPicker.value = backgroundPicker.value;
       break;
