@@ -55,6 +55,7 @@ function getMode(){
     case 'eraser':
       penPicker.value = backgroundPicker.value;
       break;
+  
   }
   return penColor;
 }
@@ -80,11 +81,10 @@ buttons.forEach(button => button.addEventListener('click', () => {
 
 const colorButton = document.getElementById('color');
 const randomButton = document.getElementById('random');
-const lightenButton = document.getElementById('lighten');
-const darkenButton = document.getElementById('darken');
 const eraserButton = document.getElementById('eraser');
 const clearButton = document.getElementById('clear');
 
+clearButton.addEventListener('click', setGridSize)
 
 
 setGrid();
