@@ -1,7 +1,8 @@
 function setGrid(){
   const gridSquares = document.querySelectorAll('.row');
   gridSquares.forEach(gridSquare => gridSquare.addEventListener('click', (e) => {
-    paintSquare(e, penPicker.value);
+    let penColor = getMode();
+    paintSquare(e, penColor);
   }));
 }
 
@@ -20,7 +21,8 @@ function setGridSize(){
       let gridSquare = document.createElement('div');
       gridSquare.classList.add('row');
       gridSquare.addEventListener('click', (e) => {
-        paintSquare(e, penPicker.value);
+        let penColor = getMode();
+        paintSquare(e, penColor);
       });
       gridCol.appendChild(gridSquare);
     }
@@ -35,10 +37,32 @@ function paintSquare(e, penColor){
   e.target.style.backgroundColor = penPicker.value;
 }
 
-function getMode(){
-  let mode; 
+function randomColor(){
+  let colorValue = Math.floor(Math.random()*255).toString(16);
+  return colorValue.length === 1 ? '0' + colorValue : colorValue;
+}
 
-  return mode;
+function getMode(){
+  let mode = document.querySelector('.selected').getAttribute('id'); 
+  let penColor = penPicker.value;
+  switch(mode){
+    case 'color':
+      penColor === backgroundPicker.value ? penPicker.value = '#363636' : penPicker.value = penColor;
+      break;
+    case 'random':
+      penPicker.value = `#${randomColor()}${randomColor()}${randomColor()}`;
+      break;
+    case 'lighten':
+      penColor = penPicker.value;
+      break;
+    case 'darken':
+      penColor = penPicker.value;
+      break;
+    case 'eraser':
+      penPicker.value = backgroundPicker.value;
+      break;
+  }
+  return penColor;
 }
 
 const gridContainer = document.getElementById('grid');
